@@ -15,7 +15,7 @@ module SimpleUploader
     before_create :init_uuid
 
     def init_uuid
-      self.uuid = ActiveSupport::SecureRandom.hex(8)
+      self.uuid = SecureRandom.hex(8)
     end
 
     def url
@@ -33,3 +33,4 @@ module SimpleUploader
     end
   end
 end
+
