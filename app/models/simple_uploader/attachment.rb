@@ -5,6 +5,7 @@ module SimpleUploader
     belongs_to :content, :polymorphic => true
     
     has_attached_file( :attachment, 
+                       styles: { :medium => "154x154#"},
                        #:styles => lambda { |attachment| attachment.instance.styles },
                        :path => "public/system/:six_bits_md5_sum/:id/:style/:filename" )
 
